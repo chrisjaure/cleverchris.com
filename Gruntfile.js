@@ -313,6 +313,16 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+        rsync: {
+            dist: {
+                options: {
+                    src: 'dist/',
+                    dest: '~/cleverchris.com/',
+                    host: 'chrisjaure@cleverchris.com',
+                    recursive: true
+                }
+            }
         }
     });
 
@@ -349,6 +359,11 @@ module.exports = function (grunt) {
         'copy:dist',
         'rev',
         'usemin'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'build',
+        'rsync:dist'
     ]);
 
     grunt.registerTask('default', [
