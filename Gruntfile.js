@@ -320,7 +320,8 @@ module.exports = function (grunt) {
                     src: 'dist/',
                     dest: '~/cleverchris.com/',
                     host: 'chrisjaure@cleverchris.com',
-                    recursive: true
+                    recursive: true,
+                    syncDestIgnoreExcl: true
                 }
             }
         }
