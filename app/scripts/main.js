@@ -67,7 +67,7 @@ var JSONP = (function(window){
 	};
 }(window));
 
-JSONP.get('http://coderwall.com/chrisjaure.json', {}, function(res) {
+JSONP.get('https://coderwall.com/chrisjaure.json', {}, function(res) {
 	'use strict';
 	if (res && res.data && res.data.badges) {
 
