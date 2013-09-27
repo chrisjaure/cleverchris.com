@@ -323,6 +323,15 @@ module.exports = function (grunt) {
                     recursive: true,
                     syncDestIgnoreExcl: true
                 }
+            },
+            digitalOcean: {
+                options: {
+                    src: 'dist/',
+                    dest: '/var/www/cleverchris.com/public/',
+                    host: 'root@192.241.147.212',
+                    recursive: true,
+                    syncDestIgnoreExcl: true
+                }
             }
         }
     });
@@ -365,6 +374,11 @@ module.exports = function (grunt) {
     grunt.registerTask('deploy', [
         'build',
         'rsync:dist'
+    ]);
+
+    grunt.registerTask('deploydo', [
+        'build',
+        'rsync:digitalOcean'
     ]);
 
     grunt.registerTask('default', [
