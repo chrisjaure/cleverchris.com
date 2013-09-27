@@ -315,15 +315,6 @@ module.exports = function (grunt) {
             ]
         },
         rsync: {
-            dist: {
-                options: {
-                    src: 'dist/',
-                    dest: '~/cleverchris.com/',
-                    host: 'chrisjaure@cleverchris.com',
-                    recursive: true,
-                    syncDestIgnoreExcl: true
-                }
-            },
             digitalOcean: {
                 options: {
                     src: 'dist/',
@@ -372,11 +363,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('deploy', [
-        'build',
-        'rsync:dist'
-    ]);
-
-    grunt.registerTask('deploydo', [
         'build',
         'rsync:digitalOcean'
     ]);
