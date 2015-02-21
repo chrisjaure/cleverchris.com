@@ -1,5 +1,6 @@
 {
   "name": "cleverchris-com",
+  "repository": "https://github.com/chrisjaure/cleverchris.com.git",
   "version": "1.0.0",
   "scripts": {
     "start": "harp server public --port ${PORT:-9000}"
@@ -8,6 +9,6 @@
     "harp": "^0.15.2"
   },
   "engines": {
-    "iojs": ">=1.3.0"
+    "iojs": "1.2.0"
   }
 }
