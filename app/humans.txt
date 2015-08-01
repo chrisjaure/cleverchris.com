@@ -6,7 +6,7 @@
   Developer: Chris Jaure
   Contact: chrisjaure [at] gmail.com
   Twitter: @chrisjaure
-  Location: Green Bay, USA
+  Location: Wisconsin, USA
 
 /* SITE */
   Standards: HTML5, CSS3
